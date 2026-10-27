@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Produk (100 Baris)</title>
+<style>
+:root{--bg:#f5f6f3;--surf:#fff;--ink:#1c2826;--mute:#5d6b68;--line:#dbe1de;--acc:#0f766e;--head:#e6ede9;--ok:#166534;--okb:#dcfce7;--lo:#92400e;--lob:#fef3c7;--out:#991b1b;--outb:#fee2e2}
+@media(prefers-color-scheme:dark){:root{--bg:#101615;--surf:#172120;--ink:#e6eeeb;--mute:#93a3a0;--line:#2a3836;--acc:#5eead4;--head:#1f2d2b;--ok:#86efac;--okb:#14352a;--lo:#fcd34d;--lob:#3a2d10;--out:#fca5a5;--outb:#3d1a1a}}
+*{box-sizing:border-box}
+body{margin:0;padding:28px 20px;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto}
+h1{font-size:1.6rem;margin:0 0 4px;letter-spacing:-.01em}
+p.sub{margin:0 0 18px;color:var(--mute)}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+input,select{font:inherit;color:var(--ink);background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+input{flex:1 1 220px;min-width:0}
+input:focus-visible,select:focus-visible,th:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+#cnt{color:var(--mute);margin-left:auto}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surf)}
+table{border-collapse:collapse;width:100%;min-width:860px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:var(--head);font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0}
+th[aria-sort="ascending"]::after{content:" ▲";font-size:.7em;color:var(--acc)}
+th[aria-sort="descending"]::after{content:" ▼";font-size:.7em;color:var(--acc)}
+tbody tr:hover{background:var(--head)}
+tr:last-child td{border-bottom:0}
+.n{text-align:right;font-variant-numeric:tabular-nums}
+th.n{text-align:right}
+.b{padding:2px 9px;border-radius:99px;font-size:.85em}
+.ok{color:var(--ok);background:var(--okb)}.lo{color:var(--lo);background:var(--lob)}.out{color:var(--out);background:var(--outb)}
+</style>
+</head>
+<body>
+<main>
+<h1>Data Produk</h1>
+<p class="sub">100 produk, 8 kolom. Semua data bersifat contoh (fiktif). Klik judul kolom untuk mengurutkan.</p>
+<div class="tools">
+<input id="q" type="search" placeholder="Cari nama, merek, atau ID produk" aria-label="Cari produk">
+<select id="c" aria-label="Filter kategori"><option value="">Semua kategori</option><option>Elektronik</option><option>Fashion Pria</option><option>Fashion Wanita</option><option>Peralatan Dapur</option><option>Perawatan Diri</option><option>Makanan &amp; Minuman</option><option>Olahraga</option><option>Alat Tulis &amp; Kantor</option><option>Perabot Rumah</option><option>Mainan &amp; Hobi</option></select>
+<span id="cnt" aria-live="polite"></span>
+</div>
+<div class="wrap">
+<table id="t">
+<thead><tr><th tabindex="0">ID Produk</th><th tabindex="0">Nama Produk</th><th tabindex="0">Kategori</th><th tabindex="0">Merek</th><th class="n" tabindex="0">Harga</th><th class="n" tabindex="0">Stok</th><th class="n" tabindex="0">Rating</th><th tabindex="0">Status</th></tr></thead>
+<tbody>
+<tr data-cat="Elektronik"><td>PRD-001</td><td>Earbuds Nirkabel TWS</td><td>Elektronik</td><td>Voltix</td><td class="n" data-v="200500">Rp 200.500</td><td class="n" data-v="76">76</td><td class="n" data-v="4.0">4.0</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-002</td><td>Power Bank 20.000 mAh</td><td>Elektronik</td><td>Aerotek</td><td class="n" data-v="240000">Rp 240.000</td><td class="n" data-v="67">67</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-003</td><td>Speaker Bluetooth Portabel</td><td>Elektronik</td><td>Lumio</td><td class="n" data-v="311000">Rp 311.000</td><td class="n" data-v="128">128</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-004</td><td>Smartwatch Layar AMOLED</td><td>Elektronik</td><td>Aerotek</td><td class="n" data-v="1015500">Rp 1.015.500</td><td class="n" data-v="23">23</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-005</td><td>Keyboard Mekanik 87 Tombol</td><td>Elektronik</td><td>Sonivo</td><td class="n" data-v="600500">Rp 600.500</td><td class="n" data-v="171">171</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-006</td><td>Mouse Gaming 6 Tombol</td><td>Elektronik</td><td>Nexora</td><td class="n" data-v="170500">Rp 170.500</td><td class="n" data-v="167">167</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-007</td><td>Webcam Full HD 1080p</td><td>Elektronik</td><td>Zentra</td><td class="n" data-v="378000">Rp 378.000</td><td class="n" data-v="169">169</td><td class="n" data-v="4.1">4.1</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-008</td><td>Charger GaN 65 W</td><td>Elektronik</td><td>Lumio</td><td class="n" data-v="261000">Rp 261.000</td><td class="n" data-v="195">195</td><td class="n" data-v="4.1">4.1</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-009</td><td>Lampu Meja LED Dimmer</td><td>Elektronik</td><td>Voltix</td><td class="n" data-v="163500">Rp 163.500</td><td class="n" data-v="0">0</td><td class="n" data-v="4.5">4.5</td><td><span class="b out">Habis</span></td></tr>
+<tr data-cat="Elektronik"><td>PRD-010</td><td>Hub USB-C 7 in 1</td><td>Elektronik</td><td>Voltix</td><td class="n" data-v="376000">Rp 376.000</td><td class="n" data-v="70">70</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-011</td><td>Kaos Polos Cotton Combed</td><td>Fashion Pria</td><td>Urbanik</td><td class="n" data-v="65000">Rp 65.000</td><td class="n" data-v="6">6</td><td class="n" data-v="4.3">4.3</td><td><span class="b lo">Stok menipis</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-012</td><td>Kemeja Flanel Kotak</td><td>Fashion Pria</td><td>Borneo Wear</td><td class="n" data-v="176500">Rp 176.500</td><td class="n" data-v="109">109</td><td class="n" data-v="3.9">3.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-013</td><td>Celana Chino Slim</td><td>Fashion Pria</td><td>Sandang Kita</td><td class="n" data-v="245000">Rp 245.000</td><td class="n" data-v="6">6</td><td class="n" data-v="4.2">4.2</td><td><span class="b lo">Stok menipis</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-014</td><td>Jaket Bomber</td><td>Fashion Pria</td><td>Urbanik</td><td class="n" data-v="273000">Rp 273.000</td><td class="n" data-v="135">135</td><td class="n" data-v="3.9">3.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-015</td><td>Hoodie Zipper Fleece</td><td>Fashion Pria</td><td>Sandang Kita</td><td class="n" data-v="244000">Rp 244.000</td><td class="n" data-v="128">128</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-016</td><td>Jeans Slim Fit</td><td>Fashion Pria</td><td>Kainara</td><td class="n" data-v="294500">Rp 294.500</td><td class="n" data-v="0">0</td><td class="n" data-v="4.2">4.2</td><td><span class="b out">Habis</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-017</td><td>Sneakers Kanvas</td><td>Fashion Pria</td><td>Sandang Kita</td><td class="n" data-v="321000">Rp 321.000</td><td class="n" data-v="181">181</td><td class="n" data-v="4.6">4.6</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-018</td><td>Topi Baseball</td><td>Fashion Pria</td><td>Sandang Kita</td><td class="n" data-v="60000">Rp 60.000</td><td class="n" data-v="33">33</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-019</td><td>Ikat Pinggang Kulit</td><td>Fashion Pria</td><td>Kainara</td><td class="n" data-v="142000">Rp 142.000</td><td class="n" data-v="144">144</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Pria"><td>PRD-020</td><td>Kaos Kaki Sport (3 Pasang)</td><td>Fashion Pria</td><td>Sandang Kita</td><td class="n" data-v="40500">Rp 40.500</td><td class="n" data-v="0">0</td><td class="n" data-v="4.7">4.7</td><td><span class="b out">Habis</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-021</td><td>Blouse Satin</td><td>Fashion Wanita</td><td>Sekar Ayu</td><td class="n" data-v="171000">Rp 171.000</td><td class="n" data-v="11">11</td><td class="n" data-v="4.4">4.4</td><td><span class="b lo">Stok menipis</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-022</td><td>Rok Plisket Panjang</td><td>Fashion Wanita</td><td>Kirana</td><td class="n" data-v="151000">Rp 151.000</td><td class="n" data-v="49">49</td><td class="n" data-v="4.8">4.8</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-023</td><td>Dress Midi Floral</td><td>Fashion Wanita</td><td>Kirana</td><td class="n" data-v="270500">Rp 270.500</td><td class="n" data-v="61">61</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-024</td><td>Hijab Pashmina Plisket</td><td>Fashion Wanita</td><td>Anindya</td><td class="n" data-v="76500">Rp 76.500</td><td class="n" data-v="19">19</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-025</td><td>Cardigan Rajut</td><td>Fashion Wanita</td><td>Sekar Ayu</td><td class="n" data-v="179000">Rp 179.000</td><td class="n" data-v="78">78</td><td class="n" data-v="4.1">4.1</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-026</td><td>Tas Selempang Mini</td><td>Fashion Wanita</td><td>Kirana</td><td class="n" data-v="209000">Rp 209.000</td><td class="n" data-v="62">62</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-027</td><td>Celana Kulot Linen</td><td>Fashion Wanita</td><td>Nusa Mode</td><td class="n" data-v="153500">Rp 153.500</td><td class="n" data-v="82">82</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-028</td><td>Tunik Katun Motif</td><td>Fashion Wanita</td><td>Lawana</td><td class="n" data-v="165000">Rp 165.000</td><td class="n" data-v="80">80</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-029</td><td>Flat Shoes Anyaman</td><td>Fashion Wanita</td><td>Lawana</td><td class="n" data-v="193000">Rp 193.000</td><td class="n" data-v="186">186</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Fashion Wanita"><td>PRD-030</td><td>Scarf Voal</td><td>Fashion Wanita</td><td>Lawana</td><td class="n" data-v="59000">Rp 59.000</td><td class="n" data-v="34">34</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-031</td><td>Wajan Anti Lengket 26 cm</td><td>Peralatan Dapur</td><td>Dapurku</td><td class="n" data-v="135500">Rp 135.500</td><td class="n" data-v="114">114</td><td class="n" data-v="4.1">4.1</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-032</td><td>Panci Presto 5 L</td><td>Peralatan Dapur</td><td>Masakita</td><td class="n" data-v="325000">Rp 325.000</td><td class="n" data-v="25">25</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-033</td><td>Rice Cooker 1,8 L</td><td>Peralatan Dapur</td><td>Masakita</td><td class="n" data-v="470000">Rp 470.000</td><td class="n" data-v="184">184</td><td class="n" data-v="4.9">4.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-034</td><td>Blender 2 L</td><td>Peralatan Dapur</td><td>Tungku Prima</td><td class="n" data-v="419000">Rp 419.000</td><td class="n" data-v="151">151</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-035</td><td>Air Fryer 4 L</td><td>Peralatan Dapur</td><td>Rumah Rasa</td><td class="n" data-v="787000">Rp 787.000</td><td class="n" data-v="141">141</td><td class="n" data-v="4.0">4.0</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-036</td><td>Set Pisau Dapur (5 Pcs)</td><td>Peralatan Dapur</td><td>Rumah Rasa</td><td class="n" data-v="167000">Rp 167.000</td><td class="n" data-v="116">116</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-037</td><td>Talenan Bambu</td><td>Peralatan Dapur</td><td>Masakita</td><td class="n" data-v="46500">Rp 46.500</td><td class="n" data-v="44">44</td><td class="n" data-v="3.8">3.8</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-038</td><td>Termos Stainless 1 L</td><td>Peralatan Dapur</td><td>Tungku Prima</td><td class="n" data-v="143000">Rp 143.000</td><td class="n" data-v="235">235</td><td class="n" data-v="4.9">4.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-039</td><td>Set Toples Kaca (3 Pcs)</td><td>Peralatan Dapur</td><td>Rumah Rasa</td><td class="n" data-v="100500">Rp 100.500</td><td class="n" data-v="0">0</td><td class="n" data-v="4.5">4.5</td><td><span class="b out">Habis</span></td></tr>
+<tr data-cat="Peralatan Dapur"><td>PRD-040</td><td>Teko Listrik 1,7 L</td><td>Peralatan Dapur</td><td>Masakita</td><td class="n" data-v="206500">Rp 206.500</td><td class="n" data-v="181">181</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-041</td><td>Sabun Wajah Lembut 100 ml</td><td>Perawatan Diri</td><td>Mawar Putih</td><td class="n" data-v="35500">Rp 35.500</td><td class="n" data-v="128">128</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-042</td><td>Serum Vitamin C 20 ml</td><td>Perawatan Diri</td><td>Mawar Putih</td><td class="n" data-v="82500">Rp 82.500</td><td class="n" data-v="81">81</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-043</td><td>Tabir Surya SPF 50 50 ml</td><td>Perawatan Diri</td><td>Dermaku</td><td class="n" data-v="78000">Rp 78.000</td><td class="n" data-v="186">186</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-044</td><td>Sampo Anti Ketombe 340 ml</td><td>Perawatan Diri</td><td>Aruna</td><td class="n" data-v="45000">Rp 45.000</td><td class="n" data-v="237">237</td><td class="n" data-v="3.9">3.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-045</td><td>Pelembap Wajah Gel 50 g</td><td>Perawatan Diri</td><td>Pelangi Skin</td><td class="n" data-v="58500">Rp 58.500</td><td class="n" data-v="80">80</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-046</td><td>Sikat Gigi Elektrik</td><td>Perawatan Diri</td><td>Dermaku</td><td class="n" data-v="231000">Rp 231.000</td><td class="n" data-v="138">138</td><td class="n" data-v="4.6">4.6</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-047</td><td>Deodoran Roll-on 50 ml</td><td>Perawatan Diri</td><td>Aruna</td><td class="n" data-v="33000">Rp 33.000</td><td class="n" data-v="92">92</td><td class="n" data-v="3.9">3.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-048</td><td>Masker Lumpur 100 g</td><td>Perawatan Diri</td><td>Aruna</td><td class="n" data-v="52000">Rp 52.000</td><td class="n" data-v="128">128</td><td class="n" data-v="4.1">4.1</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-049</td><td>Lip Balm SPF 15</td><td>Perawatan Diri</td><td>Segara Beauty</td><td class="n" data-v="22500">Rp 22.500</td><td class="n" data-v="137">137</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perawatan Diri"><td>PRD-050</td><td>Losion Tubuh 250 ml</td><td>Perawatan Diri</td><td>Segara Beauty</td><td class="n" data-v="46000">Rp 46.000</td><td class="n" data-v="64">64</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-051</td><td>Kopi Arabika Bubuk 250 g</td><td>Makanan &amp; Minuman</td><td>Kebun Hijau</td><td class="n" data-v="72500">Rp 72.500</td><td class="n" data-v="79">79</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-052</td><td>Teh Hijau Celup (25 Kantong)</td><td>Makanan &amp; Minuman</td><td>Nusantara Rasa</td><td class="n" data-v="26500">Rp 26.500</td><td class="n" data-v="69">69</td><td class="n" data-v="4.1">4.1</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-053</td><td>Mi Goreng Instan (5 Bungkus)</td><td>Makanan &amp; Minuman</td><td>Nusantara Rasa</td><td class="n" data-v="18000">Rp 18.000</td><td class="n" data-v="196">196</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-054</td><td>Minyak Goreng 2 L</td><td>Makanan &amp; Minuman</td><td>Sari Alam</td><td class="n" data-v="35000">Rp 35.000</td><td class="n" data-v="205">205</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-055</td><td>Beras Premium 5 kg</td><td>Makanan &amp; Minuman</td><td>Dapur Kita</td><td class="n" data-v="77000">Rp 77.000</td><td class="n" data-v="187">187</td><td class="n" data-v="4.6">4.6</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-056</td><td>Gula Pasir 1 kg</td><td>Makanan &amp; Minuman</td><td>Nusantara Rasa</td><td class="n" data-v="15500">Rp 15.500</td><td class="n" data-v="129">129</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-057</td><td>Susu UHT Cokelat 1 L</td><td>Makanan &amp; Minuman</td><td>Nusantara Rasa</td><td class="n" data-v="22000">Rp 22.000</td><td class="n" data-v="8">8</td><td class="n" data-v="4.2">4.2</td><td><span class="b lo">Stok menipis</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-058</td><td>Keripik Singkong Balado 150 g</td><td>Makanan &amp; Minuman</td><td>Dapur Kita</td><td class="n" data-v="17000">Rp 17.000</td><td class="n" data-v="206">206</td><td class="n" data-v="4.8">4.8</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-059</td><td>Madu Hutan 500 ml</td><td>Makanan &amp; Minuman</td><td>Nusantara Rasa</td><td class="n" data-v="86000">Rp 86.000</td><td class="n" data-v="215">215</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Makanan &amp; Minuman"><td>PRD-060</td><td>Sambal Botol Pedas 250 g</td><td>Makanan &amp; Minuman</td><td>Sari Alam</td><td class="n" data-v="27000">Rp 27.000</td><td class="n" data-v="129">129</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-061</td><td>Matras Yoga 6 mm</td><td>Olahraga</td><td>Tangkas</td><td class="n" data-v="121000">Rp 121.000</td><td class="n" data-v="191">191</td><td class="n" data-v="4.6">4.6</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-062</td><td>Dumbel Vinyl 5 kg</td><td>Olahraga</td><td>Tangkas</td><td class="n" data-v="133000">Rp 133.000</td><td class="n" data-v="108">108</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-063</td><td>Raket Badminton Karbon</td><td>Olahraga</td><td>Tangkas</td><td class="n" data-v="219500">Rp 219.500</td><td class="n" data-v="114">114</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-064</td><td>Bola Futsal Ukuran 4</td><td>Olahraga</td><td>Gerakin</td><td class="n" data-v="148500">Rp 148.500</td><td class="n" data-v="114">114</td><td class="n" data-v="4.8">4.8</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-065</td><td>Sepatu Lari Ringan</td><td>Olahraga</td><td>Atletika</td><td class="n" data-v="427000">Rp 427.000</td><td class="n" data-v="113">113</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-066</td><td>Botol Minum 750 ml</td><td>Olahraga</td><td>Bugar Prima</td><td class="n" data-v="73000">Rp 73.000</td><td class="n" data-v="133">133</td><td class="n" data-v="4.6">4.6</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-067</td><td>Resistance Band (Set 5)</td><td>Olahraga</td><td>Gerakin</td><td class="n" data-v="77500">Rp 77.500</td><td class="n" data-v="88">88</td><td class="n" data-v="3.9">3.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-068</td><td>Tali Skipping</td><td>Olahraga</td><td>Gerakin</td><td class="n" data-v="40000">Rp 40.000</td><td class="n" data-v="237">237</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-069</td><td>Sarung Tangan Gym</td><td>Olahraga</td><td>Sprintara</td><td class="n" data-v="79000">Rp 79.000</td><td class="n" data-v="0">0</td><td class="n" data-v="4.5">4.5</td><td><span class="b out">Habis</span></td></tr>
+<tr data-cat="Olahraga"><td>PRD-070</td><td>Tas Olahraga Duffel</td><td>Olahraga</td><td>Bugar Prima</td><td class="n" data-v="183500">Rp 183.500</td><td class="n" data-v="8">8</td><td class="n" data-v="4.1">4.1</td><td><span class="b lo">Stok menipis</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-071</td><td>Buku Tulis A5 (10 Buah)</td><td>Alat Tulis &amp; Kantor</td><td>Mejakerja</td><td class="n" data-v="61500">Rp 61.500</td><td class="n" data-v="143">143</td><td class="n" data-v="4.6">4.6</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-072</td><td>Pulpen Gel 0,5 mm (12 Buah)</td><td>Alat Tulis &amp; Kantor</td><td>Pena Mas</td><td class="n" data-v="42000">Rp 42.000</td><td class="n" data-v="225">225</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-073</td><td>Highlighter Pastel (6 Warna)</td><td>Alat Tulis &amp; Kantor</td><td>Garis Lurus</td><td class="n" data-v="31500">Rp 31.500</td><td class="n" data-v="178">178</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-074</td><td>Map Folder Plastik (10 Buah)</td><td>Alat Tulis &amp; Kantor</td><td>Tulisku</td><td class="n" data-v="25500">Rp 25.500</td><td class="n" data-v="176">176</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-075</td><td>Kalkulator Ilmiah</td><td>Alat Tulis &amp; Kantor</td><td>Mejakerja</td><td class="n" data-v="123000">Rp 123.000</td><td class="n" data-v="140">140</td><td class="n" data-v="4.9">4.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-076</td><td>Papan Jalan A4</td><td>Alat Tulis &amp; Kantor</td><td>Pena Mas</td><td class="n" data-v="23000">Rp 23.000</td><td class="n" data-v="51">51</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-077</td><td>Stapler Mini</td><td>Alat Tulis &amp; Kantor</td><td>Garis Lurus</td><td class="n" data-v="17500">Rp 17.500</td><td class="n" data-v="127">127</td><td class="n" data-v="4.0">4.0</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-078</td><td>Kertas HVS A4 80 gsm (500 Lembar)</td><td>Alat Tulis &amp; Kantor</td><td>Mejakerja</td><td class="n" data-v="64000">Rp 64.000</td><td class="n" data-v="128">128</td><td class="n" data-v="4.0">4.0</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-079</td><td>Spidol Whiteboard (4 Warna)</td><td>Alat Tulis &amp; Kantor</td><td>Kertasindo</td><td class="n" data-v="36000">Rp 36.000</td><td class="n" data-v="194">194</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Alat Tulis &amp; Kantor"><td>PRD-080</td><td>Tempat Pensil Kanvas</td><td>Alat Tulis &amp; Kantor</td><td>Garis Lurus</td><td class="n" data-v="28000">Rp 28.000</td><td class="n" data-v="122">122</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-081</td><td>Rak Buku 4 Tingkat</td><td>Perabot Rumah</td><td>Omah Tata</td><td class="n" data-v="263500">Rp 263.500</td><td class="n" data-v="153">153</td><td class="n" data-v="4.5">4.5</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-082</td><td>Meja Lipat Laptop</td><td>Perabot Rumah</td><td>Omah Tata</td><td class="n" data-v="110000">Rp 110.000</td><td class="n" data-v="138">138</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-083</td><td>Kursi Kerja Ergonomis</td><td>Perabot Rumah</td><td>Sudut Nyaman</td><td class="n" data-v="965500">Rp 965.500</td><td class="n" data-v="216">216</td><td class="n" data-v="3.9">3.9</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-084</td><td>Lampu Tidur LED Sentuh</td><td>Perabot Rumah</td><td>Omah Tata</td><td class="n" data-v="85000">Rp 85.000</td><td class="n" data-v="105">105</td><td class="n" data-v="4.0">4.0</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-085</td><td>Gantungan Baju Besi</td><td>Perabot Rumah</td><td>Rumahan</td><td class="n" data-v="106000">Rp 106.000</td><td class="n" data-v="0">0</td><td class="n" data-v="4.3">4.3</td><td><span class="b out">Habis</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-086</td><td>Bantal Memory Foam</td><td>Perabot Rumah</td><td>Griya Kayu</td><td class="n" data-v="150500">Rp 150.500</td><td class="n" data-v="176">176</td><td class="n" data-v="4.6">4.6</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-087</td><td>Sprei Katun 160 x 200</td><td>Perabot Rumah</td><td>Sudut Nyaman</td><td class="n" data-v="255000">Rp 255.000</td><td class="n" data-v="144">144</td><td class="n" data-v="4.6">4.6</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-088</td><td>Rak Sepatu 3 Susun</td><td>Perabot Rumah</td><td>Sudut Nyaman</td><td class="n" data-v="124000">Rp 124.000</td><td class="n" data-v="207">207</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-089</td><td>Cermin Dinding Bulat 60 cm</td><td>Perabot Rumah</td><td>Lantai Dua</td><td class="n" data-v="161000">Rp 161.000</td><td class="n" data-v="49">49</td><td class="n" data-v="4.0">4.0</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Perabot Rumah"><td>PRD-090</td><td>Tempat Sampah Injak 12 L</td><td>Perabot Rumah</td><td>Lantai Dua</td><td class="n" data-v="85500">Rp 85.500</td><td class="n" data-v="218">218</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-091</td><td>Puzzle 500 Keping</td><td>Mainan &amp; Hobi</td><td>Lintang</td><td class="n" data-v="86000">Rp 86.000</td><td class="n" data-v="100">100</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-092</td><td>Balok Susun Kayu (Set 50)</td><td>Mainan &amp; Hobi</td><td>Kreasiku</td><td class="n" data-v="139500">Rp 139.500</td><td class="n" data-v="27">27</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-093</td><td>Kartu Remi Premium</td><td>Mainan &amp; Hobi</td><td>Kreasiku</td><td class="n" data-v="25500">Rp 25.500</td><td class="n" data-v="0">0</td><td class="n" data-v="4.7">4.7</td><td><span class="b out">Habis</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-094</td><td>Papan Catur Magnetik</td><td>Mainan &amp; Hobi</td><td>Petak Umpet</td><td class="n" data-v="104000">Rp 104.000</td><td class="n" data-v="190">190</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-095</td><td>Rubik 3x3 Speed Cube</td><td>Mainan &amp; Hobi</td><td>Petak Umpet</td><td class="n" data-v="52500">Rp 52.500</td><td class="n" data-v="70">70</td><td class="n" data-v="4.4">4.4</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-096</td><td>Cat Air 24 Warna</td><td>Mainan &amp; Hobi</td><td>Ceria Toys</td><td class="n" data-v="72500">Rp 72.500</td><td class="n" data-v="238">238</td><td class="n" data-v="4.2">4.2</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-097</td><td>Boneka Beruang 40 cm</td><td>Mainan &amp; Hobi</td><td>Kreasiku</td><td class="n" data-v="129000">Rp 129.000</td><td class="n" data-v="93">93</td><td class="n" data-v="4.0">4.0</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-098</td><td>Mobil Remote Control</td><td>Mainan &amp; Hobi</td><td>Kreasiku</td><td class="n" data-v="198000">Rp 198.000</td><td class="n" data-v="0">0</td><td class="n" data-v="4.3">4.3</td><td><span class="b out">Habis</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-099</td><td>Ukulele Soprano</td><td>Mainan &amp; Hobi</td><td>Dunia Kecil</td><td class="n" data-v="325500">Rp 325.500</td><td class="n" data-v="128">128</td><td class="n" data-v="4.7">4.7</td><td><span class="b ok">Tersedia</span></td></tr>
+<tr data-cat="Mainan &amp; Hobi"><td>PRD-100</td><td>Buku Mewarnai Dewasa</td><td>Mainan &amp; Hobi</td><td>Dunia Kecil</td><td class="n" data-v="45500">Rp 45.500</td><td class="n" data-v="33">33</td><td class="n" data-v="4.3">4.3</td><td><span class="b ok">Tersedia</span></td></tr>
+</tbody>
+</table>
+</div>
+</main>
+<script>
+const tb=document.querySelector("#t tbody"),rows=[...tb.rows],q=document.getElementById("q"),c=document.getElementById("c"),cnt=document.getElementById("cnt");
+function filter(){const s=q.value.trim().toLowerCase(),k=c.value;let n=0;
+rows.forEach(r=>{const ok=(!k||r.dataset.cat===k)&&(!s||r.textContent.toLowerCase().includes(s));r.hidden=!ok;if(ok)n++});
+cnt.textContent=n+" dari "+rows.length+" produk"}
+q.addEventListener("input",filter);c.addEventListener("change",filter);filter();
+document.querySelectorAll("#t th").forEach((th,i)=>{
+const go=()=>{const asc=th.getAttribute("aria-sort")!=="ascending";
+document.querySelectorAll("#t th").forEach(h=>h.removeAttribute("aria-sort"));
+th.setAttribute("aria-sort",asc?"ascending":"descending");
+const val=r=>{const d=r.cells[i].dataset.v;return d!==undefined?parseFloat(d):r.cells[i].textContent};
+rows.sort((a,b)=>{const x=val(a),y=val(b);const r=typeof x==="number"?x-y:String(x).localeCompare(y,"id");return asc?r:-r});
+rows.forEach(r=>tb.appendChild(r))};
+th.addEventListener("click",go);th.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}})});
+</script>
+</body>
+</html>
